@@ -1,9 +1,10 @@
-// const controller = require('./controllers/controller');
+const { checkValidationSchema } = require('./middlewares/checkSchema');
 const { healthCheck } = require('./controllers/healthCheck');
+const { getAlbums, getPhotos } = require('./controllers/albums');
+const { albumByIdValidator } = require('./schemas/albums');
 
 exports.init = app => {
   app.get('/health', healthCheck);
-  // app.get('/endpoint/get/path', [], controller.methodGET);
-  // app.put('/endpoint/put/path', [], controller.methodPUT);
-  // app.post('/endpoint/post/path', [], controller.methodPOST);
+  app.get('/albums', getAlbums);
+  app.get('/albums/:id/photos', checkValidationSchema(albumByIdValidator), getPhotos);
 };

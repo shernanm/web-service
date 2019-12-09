@@ -67,11 +67,14 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "jwt-simple": "^0.5.1",
-    "rollbar": "^2.3.9",
-    "umzug": "^2.1.0",
+    "express-validator": "^6.3.0",
     "express-wolox-logger": "1.1.0",
-    "swagger-ui-express": "^4.0.7"
+    "jwt-simple": "^0.5.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "rollbar": "^2.3.9",
+    "swagger-ui-express": "^4.0.7",
+    "umzug": "^2.1.0"
   },
   "devDependencies": {
     "babel": "6.23.0",
